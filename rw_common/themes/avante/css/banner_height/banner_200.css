@@ -1,0 +1,3 @@
+/* @option user-defined header height */
+#banner, .slides_container, .slides_container div{height: 200px;}
+#slides .next,#slides .prev {top:80px;}

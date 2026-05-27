@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE>mike jutan - mjray Raytracer</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {font-style: italic; font-size: x-large;}
+.style11 {font-size: xx-large}
+body {
+	background-color: #000000;
+}
+body,td,th {
+	color: #FFFFFF;
+}
+-->
+</style>
+</HEAD>
+<BODY LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
+<div align="center" class="style8">
+  <h2 class="style11"><img src="../titleImage.jpg" alt="TitleImage" width="432" height="216"></h2>
+  <p class="style9">Objective 3:<br>
+  Adaptive Anti-Aliasing </p>
+  <p>&nbsp;</p>
+  <table width="80%" border="0">
+    <tr>
+      <td><p align="center">Rather than just implementing straight Supersampling, I wrote an Adaptive method which runs in multiple passes. The raytracer first raytraces the left and right half of the image with 1 ray per pixel. The processes then join and the image is combined.</p>
+        <p align="center">Then I determine if pixels in the image differ from their neighbouring pixels by more than a tolerance amount. If they do, these are marked as being &quot;bad pixels&quot; and are supersampled with a high amount of rays (5x5 = 25 rays or 6x6 = 36 rays). By only supersampling the pixels that actually need it, I save hours and hours of Raytracing time.</p>
+        <p align="center">&nbsp;</p>
+        <p align="center"><span class="style11"><img src="cows_noantialias.png" width="256" height="256"></span></p>
+        <p align="center">Cows image, not anti-aliased </p>
+        <p align="center"><img src="cowsAdaptivePixelsMarked.png" width="256" height="256"></p>
+        <p align="center">Cows image &quot;marked&quot; for Anti-aliasing - 15% of the image <br>
+        </p>
+        <p align="center"><span class="style11"><img src="cows_adaptiveAntiAlias.png" width="256" height="256"></span></p>
+        <p align="center">Macho Cows image with Adaptive Anti-Aliasing <br>
+        </p>
+		  
+		    <p align="center">&nbsp;</p>
+        <p align="center"><img src="nonHeirMarkingBadPixels.png" width="1024" height="1024">          
+        <p align="center">Non-heir &quot;bad pixels&quot; marked - only 6% of image!          
+        <p align="center"><img src="sampleWithNormalsBig_WithoutAntiAliasing.png" width="512" height="512">          
+        <p align="center">Glass scene, no anti-aliasing
+        <p align="center">        
+        <p align="center"><img src="sampleWithNormalsBig_Marked.png" width="512" height="512"><br>
+        Glass scene with marking        
+        <p align="center">
+        
+        <p align="center"><img src="sampleWithNormalsBig_AntiAlias.png" width="512" height="512">                                       
+      <p align="center">Glass scene with Anti-aliasing </td>
+    </tr>
+  </table>
+
+
+  <p>Written by: Mike Jutan<br>
+CS 488 - Computer Graphics<br>
+University of Waterloo </p>
+</div>
+</BODY>
+</HTML>

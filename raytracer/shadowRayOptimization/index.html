@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<TITLE>mike jutan - mjray Raytracer</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {font-style: italic; font-size: x-large;}
+.style11 {font-size: xx-large}
+body {
+	background-color: #000000;
+}
+body,td,th {
+	color: #FFFFFF;
+}
+-->
+</style>
+</HEAD>
+<BODY LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
+<div align="center" class="style8">
+  <h2 class="style11"><img src="../titleImage.jpg" alt="TitleImage" width="432" height="216"></h2>
+  <p class="style9">Objective 13:<br>
+  Shadow Ray Voxel Optimization </p>
+  <p>&nbsp;</p>
+  <table width="77%" border="0">
+    <tr>
+      <td><p>As a further optimization I added Voxel Traversal support for my Area Lights and Point Lights, so that they could also benefit from the grid optimization if the user had requested it. This also had a pretty massive effect on the Venus De Milo scene. </p>
+        <p>&nbsp;</p>
+        <p align="center"><img src="../voxelPolygonOptimization/venusDeMiloInterpolated.png" width="512" height="512"> </p>
+        <table width="40%" border="1" align="center">
+          <tr>
+            <td width="52%"><em><strong>Accumulated Optimization Status</strong></em></td>
+            <td width="48%"><em><strong>Runtime</strong></em></td>
+          </tr>
+          <tr>
+            <td>Initial Voxel Traversal with voxel size &quot;guess&quot; 12x12x12s </td>
+            <td>2752 seconds. (~46 minutes) </td>
+          </tr>
+          <tr>
+            <td>Voxel-Polygon Sub-Mesh Optimization </td>
+            <td>143 seconds (~2 and a half minutes) </td>
+          </tr>
+          <tr>
+            <td>Shadow Ray Voxel Optimization</td>
+            <td>35 seconds </td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <p><br></p>
+        </td>
+    </tr>
+  </table>
+  <p>Written by: Mike Jutan<br>
+CS 488 - Computer Graphics<br>
+University of Waterloo </p>
+</div>
+</BODY>
+</HTML>

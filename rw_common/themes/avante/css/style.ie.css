@@ -1,0 +1,17 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Title : IE Specific CSS Styles
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* ------------------------------------------------------------------------------------------------------------------------
+
+	css
+
+------------------------------------------------------------------------------------------------------------------------ */
+
+#wrap {border: 1px solid #000;}
+#content, #bottom, #footer {height: 1%;overflow: hidden;}
+html > body #slides .caption {background:transparent;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);zoom: 1;}
+*:first-child+html .album-wrapper {margin-bottom: 40px;}
+#pagination li.prev, #pagination li.next{top: 2px;}

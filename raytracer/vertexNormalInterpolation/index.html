@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>mike jutan - mjray Raytracer</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {font-style: italic; font-size: x-large;}
+.style11 {font-size: xx-large}
+body {
+	background-color: #000000;
+}
+body,td,th {
+	color: #FFFFFF;
+}
+-->
+</style>
+</HEAD>
+<BODY LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
+<div align="center" class="style8">
+  <h2 class="style11"><img src="../titleImage.jpg" alt="TitleImage" width="432" height="216"></h2>
+  <p class="style9">Objective 8:<br>
+  Phong Model using Vertex Normal Interpolation on Triangles </p>
+  <p>&nbsp;</p>
+  <table width="80%" border="0">
+    <tr>
+      <td><p align="center">For Vertex Normal Interpolation, I import vertex normals from OBJ files, and use Barycentric Gouraud-style interpolation across the face of the imported triangle. The result is a very nice, smooth mesh rendering that is much more aesthetically pleasing and professional than the faceted look.</p>
+        <p align="center"><img src="venusDeMilo.png" width="512" height="512"></p>
+        <p align="center">Venus De Milo mesh, no interpolation</p>
+        <p align="center">&nbsp;</p>
+        <p align="center"><img src="venusDeMiloInterpolated.png" width="1024" height="1024"> </p>
+        <p align="center">Venus De Milo mesh with Vertex Normal Interpolation</p>
+        <p align="center"><img src="sampleRefraction.png" width="256" height="256"> </p>
+        <p align="center">Glass scene with no interpolation</p>
+        <p align="center"><img src="sampleWithNormals.png" width="1024" height="1024">  </p>
+        <p align="center">Glass scene with Vertex Normal Interpolation </p></td>
+    </tr>
+  </table>
+  <p>Written by: Mike Jutan<br>
+CS 488 - Computer Graphics<br>
+University of Waterloo </p>
+</div>
+</BODY>
+</HTML>

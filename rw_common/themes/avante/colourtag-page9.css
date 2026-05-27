@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------------------------------------------------------------------
+
+	css colour tags
+
+------------------------------------------------------------------------------------------------------------------------ */
+body{background-color: #2C1A13;color: #666666;}
+#main, .photo-background{background-color: #EEEEEE;}
+a{color: #117D9A;}
+#blog-categories a{border-bottom-color: #CCCCCC;}
+.blog-archive-link-disabled,.blog-archive-link-enabled,.blog-tag-cloud a,#blog-rss-feeds a{background-color: #117D9A;}
+#primary-content h1,#primary-content h2,#primary-content h3,.album-title,.movie-page-title,.message-text, #secondary-content, #secondary-content h3, #blog-categories a, .form-input-field,textarea, .filesharing-item, .movie-thumbnail-frame img, .thumbnail-frame img, #pagination, .movie-thumbnail-frame img {border-color: #CCCCCC !important;}
+#tophead h1 a {color: #FFFFFF; }
+#tophead h1 span {color: #117D9A; }
+#wrap-nav, .photo-links{background-color: #0B84A3;}
+.jqueryslidemenu ul li a, .photo-links a { color: #CCCCCC;}
+.jqueryslidemenu ul li ul { background-color: #EEEEEE;}
+.jqueryslidemenu ul li ul li a { color:#777777; }
+.jqueryslidemenu ul li ul li a:hover { background-color:#FFFFFF; }
+#banner{background-color: #EEEEEE}
+.wrap-pagination{background-color: #414141;}
+#primary-content h1,#primary-content h2,#primary-content h3,.blog-entry-title a,.album-title,.movie-page-title,.message-text { color: #333333; }
+.blog-entry-date{color: #999999;}
+#secondary-content{color: #666666;}
+#secondary-content h3 { color: #666666; }
+#bottom{background-color: #414141;color: #999999;}
+#bottom h2 { color: #999999; }
+#bottom a { color: #999999; }
+#bottom ul li { border-color: #333333; }
+#footer{color: #999999;background-color: #333333; }
+#footer a{color: #117D9A;}
+.photo-navigation{background-color: #2C1A13;}

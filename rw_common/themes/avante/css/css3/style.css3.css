@@ -1,0 +1,35 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+CSS3 Elements Seperated to Maintain Validation
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+#wrap {
+-moz-box-shadow: rgba(0, 0, 0, 0.597656) 0px 1px 6px;
+-webkit-box-shadow: rgba(0, 0, 0, 0.597656) 0px 1px 6px;
+box-shadow: rgba(0, 0, 0, 0.597656) 0px 1px 6px;
+}
+
+.jqueryslidemenu ul li ul { 
+-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.5); 
+-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.5); 
+box-shadow:0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.jqueryslidemenu ul li ul { 
+-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.5); 
+-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.5); 
+box-shadow:0 1px 4px rgba(0, 0, 0, 0.5); 
+}
+
+#slides .caption {
+background:rgba(0,0,0,.5);
+}
+
+.thumbnail-caption { 
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+filter: alpha(opacity=50);
+opacity: .5;
+}
+
+img { -ms-interpolation-mode: bicubic; }

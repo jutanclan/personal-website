@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>mike jutan - mjray Raytracer</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.style8 {font-family: Arial, Helvetica, sans-serif}
+.style9 {font-style: italic; font-size: x-large;}
+.style11 {font-size: xx-large}
+body {
+	background-color: #000000;
+}
+body,td,th {
+	color: #FFFFFF;
+}
+-->
+</style>
+</HEAD>
+<BODY LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
+<div align="center" class="style8">
+  <h2 class="style11"><img src="../titleImage.jpg" alt="TitleImage" width="432" height="216"></h2>
+  <p class="style9">Objective 9:<br>
+  Area Light Support and Soft Shadows </p>
+  <p>&nbsp;</p>
+  <table width="80%" border="0">
+    <tr>
+      <td><p align="center">I implemented an area light in addition to the standard point light. This light is defined with 3 vertices as explained in my Raytracing manual. The result is a soft shadow with variable shadow intensity rather than the strict boolean &quot;are you in shadow or not&quot; method used by Point lights.</p>
+        <p align="center">&nbsp; </p>
+        <p align="center"><img src="areaLightPointLightOnly.png" width="512" height="512"></p>
+        <p align="center">Point light method with hard shadows</p>
+        <p align="center"><img src="area1by1Noise.png" width="512" height="512"> </p>
+        <p align="center">Area light with 1x1 shadow ray grid (1 shadow ray)</p>
+        <p align="center"><img src="area2by2Noise.png" width="512" height="512"> </p>
+        <p align="center">Area light with 2x2 shadow ray grid (4 shadow rays)</p>
+        <p align="center"><img src="area4by4Noise.png" width="512" height="512"></p>
+        <p align="center">Area light with 4x4 shadow ray grid (16 shadow rays)</p>
+        <p align="center"><img src="areaLight10by10UsingVoxels.png" width="512" height="512"></p>
+        <p align="center">Area light with 10x10 shadow ray grid (100 shadow rays)... ooh pretty eh?!!</p>
+      </td>
+    </tr>
+  </table>
+  <p>Written by: Mike Jutan<br>
+CS 488 - Computer Graphics<br>
+University of Waterloo </p>
+</div>
+</BODY>
+</HTML>

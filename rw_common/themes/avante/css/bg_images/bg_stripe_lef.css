@@ -1,0 +1,2 @@
+/* @option user-defined show background image / stripe vertical */
+body, .photo-navigation{background-image: url("../../images/bg_stripe_lef.png");background-repeat: repeat-x;background-position: top;}

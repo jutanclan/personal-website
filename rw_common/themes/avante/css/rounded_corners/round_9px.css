@@ -1,0 +1,53 @@
+/* @option user-defined layout - (show rounded corners) */
+
+#wrap, #pagination, .filesharing-item{
+-webkit-border-radius: 9px;
+-moz-border-radius: 9px;
+border-radius: 9px;
+}
+
+#wrap-nav{
+-webkit-border-top-left-radius: 9px;
+-webkit-border-top-right-radius: 9px;
+-moz-border-radius-topleft: 9px;
+-moz-border-radius-topright: 9px;
+border-top-left-radius: 9px;
+border-top-right-radius: 9px;
+}
+
+.jqueryslidemenu ul li ul { 
+-webkit-border-bottom-right-radius: 9px; 
+-webkit-border-bottom-left-radius: 9px; 
+-moz-border-radius-bottomright: 9px; 
+-moz-border-radius-bottomleft: 9px; 
+border-bottom-right-radius: 9px; 
+border-bottom-left-radius: 9px;
+}
+
+.jqueryslidemenu ul li ul { 
+-webkit-border-radius:9px; 
+-moz-border-radius:9px; 
+border-radius:9px;
+}
+
+.jqueryslidemenu ul li ul li a:hover {
+-webkit-border-radius:9px; 
+-moz-border-radius:9px; 
+border-radius:9px; 
+}
+
+.thumbnail-frame img, 
+.movie-thumbnail-frame img {
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+
+#footer {
+-webkit-border-bottom-right-radius: 9px;
+-webkit-border-bottom-left-radius: 9px;
+-moz-border-radius-bottomright: 9px;
+-moz-border-radius-bottomleft: 9px;
+border-bottom-right-radius: 9px;
+border-bottom-left-radius: 9px;
+}

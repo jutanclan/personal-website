@@ -1,0 +1,8 @@
+/* @option user-defined layout width */
+#tophead,#wrap-nav, #wrap {width: 760px;}
+#slides .slides_container{overflow: hidden;width: 700px;}
+#slides .next {left:700px;}
+.caption {width: 700px !important;}
+#primary-content{width: 500px;}
+#secondary-content{width: 160px;}
+#footer {width: auto;}

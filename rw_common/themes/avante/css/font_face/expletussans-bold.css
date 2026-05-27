@@ -1,0 +1,52 @@
+/* Expletus-Sans */
+
+@font-face {
+    font-family: 'ExpletusSansBold';
+    src: url('../../fonts/expletus-sans/expletussans-bold-webfont.eot');
+    src: url('../../fonts/expletus-sans/expletussans-bold-webfont.eot?iefix') format('eot'),
+         url('../../fonts/expletus-sans/expletussans-bold-webfont.woff') format('woff'),
+         url('../../fonts/expletus-sans/expletussans-bold-webfont.ttf') format('truetype'),
+         url('../../fonts/expletus-sans/expletussans-bold-webfont.svg#webfont2vF3VLRG') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ExpletusSansMedium';
+    src: url('../../fonts/expletus-sans/expletussans-medium-webfont.eot');
+    src: url('../../fonts/expletus-sans/expletussans-medium-webfont.eot?iefix') format('eot'),
+         url('../../fonts/expletus-sans/expletussans-medium-webfont.woff') format('woff'),
+         url('../../fonts/expletus-sans/expletussans-medium-webfont.ttf') format('truetype'),
+         url('../../fonts/expletus-sans/expletussans-medium-webfont.svg#webfont2OCqx4ob') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ExpletusSansRegular';
+    src: url('../../fonts/expletus-sans/expletussans-regular-webfont.eot');
+    src: url('../../fonts/expletus-sans/expletussans-regular-webfont.eot?iefix') format('eot'),
+         url('../../fonts/expletus-sans/expletussans-regular-webfont.woff') format('woff'),
+         url('../../fonts/expletus-sans/expletussans-regular-webfont.ttf') format('truetype'),
+         url('../../fonts/expletus-sans/expletussans-regular-webfont.svg#webfont0qZ2L5m1') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ExpletusSansSemiBold';
+    src: url('../../fonts/expletus-sans/expletussans-semibold-webfont.eot');
+    src: url('../../fonts/expletus-sans/expletussans-semibold-webfont.eot?iefix') format('eot'),
+         url('../../fonts/expletus-sans/expletussans-semibold-webfont.woff') format('woff'),
+         url('../../fonts/expletus-sans/expletussans-semibold-webfont.ttf') format('truetype'),
+         url('../../fonts/expletus-sans/expletussans-semibold-webfont.svg#webfont7TAduTaK') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* @option user-defined @font-face */
+h1,h2,h3,h4,h5,h6,.album-title,.movie-page-title,.message-text,.photo-title { font-family: ExpletusSansBold; }

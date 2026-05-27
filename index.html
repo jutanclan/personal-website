@@ -1,291 +1,351 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mikejutan.com — Coming Soon</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-    :root {
-      --c-bg:      #0a0a0f;
-      --c-lime:    #c6f135;
-      --c-coral:   #ff5f4b;
-      --c-sky:     #38d9f5;
-      --c-violet:  #9b5de5;
-      --c-gold:    #ffd166;
-      --c-white:   #f0ede6;
-    }
+<!-- | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    html, body {
-      height: 100%;
-      background: var(--c-bg);
-      color: var(--c-white);
-      font-family: 'DM Mono', monospace;
-      overflow: hidden;
-    }
+Version: 1.2
 
-    /* ── Noise grain overlay ── */
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-      opacity: 0.04;
-      pointer-events: none;
-      z-index: 100;
-    }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - | -->
 
-    /* ── Roaming gradient blobs ── */
-    .blobs {
-      position: fixed; inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-    }
-    .blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(110px);
-      opacity: 0.35;
-      animation: drift linear infinite;
-    }
-    .blob-1 { width: 520px; height: 520px; background: var(--c-violet); top: -120px; left: -100px; animation-duration: 22s; }
-    .blob-2 { width: 420px; height: 420px; background: var(--c-coral);  bottom: -80px; right: -80px;  animation-duration: 18s; animation-delay: -6s; }
-    .blob-3 { width: 340px; height: 340px; background: var(--c-sky);    top: 40%; left: 50%;          animation-duration: 26s; animation-delay: -11s; }
+	<head>
+		<title>mikejutan.com :: Home</title>
+		
+<!-- Meta -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="RapidWeaver" />
+		<link rel="icon" href="http://www.mikejutan.com/favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="http://www.mikejutan.com/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="http://www.mikejutan.com/apple-touch-icon.png" />
+		
+		
+<!-- CSS -->
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/styles.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/css/css3/style.css3.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/css/prettyPhoto.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/colourtag-page0.css" />
+		<link rel="stylesheet" type="text/css" media="print" href="rw_common/themes/avante/print.css" />
+		
+<!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" media="all" href="rw_common/themes/avante/css/style.ie.css" />
+<![endif]-->
 
-    @keyframes drift {
-      0%   { transform: translate(0, 0)    rotate(0deg); }
-      33%  { transform: translate(60px, -40px) rotate(120deg); }
-      66%  { transform: translate(-40px, 60px) rotate(240deg); }
-      100% { transform: translate(0, 0)    rotate(360deg); }
-    }
 
-    /* ── Main layout ── */
-    .stage {
-      position: relative;
-      z-index: 1;
-      height: 100vh;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      padding: clamp(1.5rem, 4vw, 3rem);
-    }
+<!-- JavaScript : Include and embedded version -->
+		<script type="text/javascript" src="rw_common/themes/avante/js/jquery.min.js"></script>
+		<script type="text/javascript" src="rw_common/themes/avante/js/jquery.prettyPhoto.js"></script>
+		<script type="text/javascript" src="rw_common/themes/avante/js/custom.js"></script>
+		<script type="text/javascript" src="rw_common/themes/avante/js/rwget.js"></script>
+		<script type="text/javascript" src="rw_common/themes/avante/javascript.js"></script>
+		<script charset="utf-8">
+		RwSet = {
+			pathto: "rw_common/themes/avante/javascript.js",
+			baseurl: "http://www.mikejutan.com/"
+		};
+		</script>
 
-    /* ── Top bar ── */
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 0.2s;
-    }
-    .topbar .domain {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-      letter-spacing: 0.12em;
-      color: var(--c-lime);
-    }
-    .topbar .tag {
-      font-size: 0.65rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--c-white);
-      opacity: 0.45;
-      padding-top: 0.3rem;
-    }
+<!-- JavaScript & CSS : Style Variations -->
+		<script type="text/javascript" src="rw_common/themes/avante/js/extracontent.js"></script>
+		<script type="text/javascript" src="rw_common/themes/avante/js/slides.min.jquery.js"></script>
+		<script type="text/javascript" src="rw_common/themes/avante/js/facebook.js"></script>
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/css/bg_images/bg_vertical.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/css/font_face/expletussans-regular.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/css/font_family/lucida-grande.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/css/width/960.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/css/rounded_corners/round_6px.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/css/top_menu/float_left.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/css/top_menu/fs_13.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/css/main_content/fs_13.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/css/sidebar/sidebar_right.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/css/side_content/fs_11.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/css/bottom_content/fs_12.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/css/banner_height/banner_350.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/avante/css/stock/banner_1.css" />
+		
+		<style type="text/css" media="all">#tophead .floatclear.center {
+padding-top:15px;
+padding-bottom:10px;
+}
 
-    /* ── Hero ── */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 2rem;
-      max-width: 820px;
-    }
+#secondary-content ul li {
+list-style: none;
+}
 
-    .kicker {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 0.45s;
-    }
-    .kicker-line {
-      width: 40px; height: 2px;
-      background: var(--c-coral);
-    }
-    .kicker span {
-      font-size: 0.68rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--c-coral);
-    }
+div.feedburnerFeedBlock { 
+border:1px solid #ccc; 
+background-color:#E7E7EF;
+padding:5px; 
+color:#000000;
+font-family:Trebuchet MS;
+font-size:11px;
+}
 
-    .headline {
-      opacity: 0;
-      animation: fadeUp 0.9s ease forwards 0.65s;
-    }
-    .headline h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(5rem, 14vw, 13rem);
-      line-height: 0.88;
-      letter-spacing: 0.01em;
-      color: var(--c-white);
-    }
-    .headline h1 em {
-      font-style: normal;
-      color: var(--c-lime);
-      display: inline-block;
-      animation: colorCycle 8s linear infinite;
-    }
+div.feedburnerFeedBlock ul {
+margin-left:5px;
+padding-left:5px;
+list-style-type: none;
+}
+div.feedburnerFeedBlock ul li span.headline { 
+font-size:11px;
+font-weight:bold;
+color:#117d9a;
+text-decoration:underline;
+display:block; 
+margin:5px 0 0 0; 
+}
+.headline a{ 
+font-size:12px;
+color:#117d9a;
+}
+.headline a:hover{ 
+color:#117d9a;
+}
+.feedTitle a{ 
+font-size:11px;
+color:#117d9a;
+}
+.postlink{ 
+font-size:11px;
+}
+            
 
-    @keyframes colorCycle {
-      0%,100% { color: var(--c-lime); }
-      25%      { color: var(--c-sky); }
-      50%      { color: var(--c-gold); }
-      75%      { color: var(--c-coral); }
-    }
+#creditfooter {
+display: none;
+}</style>
 
-    .sub {
-      font-family: 'DM Serif Display', serif;
-      font-style: italic;
-      font-size: clamp(1rem, 2.2vw, 1.5rem);
-      color: var(--c-white);
-      opacity: 0.6;
-      max-width: 480px;
-      line-height: 1.55;
-      opacity: 0;
-      animation: fadeUp 0.9s ease forwards 0.85s;
-    }
+		<script type="text/javascript">
+			 /* Enable jQuery Slides */
 
-    /* ── Colour chips ── */
-    .chips {
-      display: flex;
-      gap: 0.6rem;
-      flex-wrap: wrap;
-      opacity: 0;
-      animation: fadeUp 0.9s ease forwards 1.05s;
-    }
-    .chip {
-      height: 8px;
-      border-radius: 99px;
-      animation: chipPulse 3s ease-in-out infinite;
-    }
-    .chip:nth-child(1) { width: 56px;  background: var(--c-lime);   animation-delay: 0s; }
-    .chip:nth-child(2) { width: 32px;  background: var(--c-coral);  animation-delay: 0.3s; }
-    .chip:nth-child(3) { width: 44px;  background: var(--c-sky);    animation-delay: 0.6s; }
-    .chip:nth-child(4) { width: 24px;  background: var(--c-violet); animation-delay: 0.9s; }
-    .chip:nth-child(5) { width: 38px;  background: var(--c-gold);   animation-delay: 1.2s; }
+jQuery.noConflict();
+jQuery(document).ready(function($){
+	$('#slides').slides({
+		crossfade: true,
+		effect: 'fade',
+		pause: 2500,
+		play: 5000,
+		hoverPause: true,
+		animationStart: function(){
+			$('.caption').animate({
+				bottom:-35
+			},100);
+		},
+		animationComplete: function(current){
+			$('.caption').animate({
+				bottom:0
+			},200);
+		}
+	});
+});
+ 
+		</script>
+		
+		
 
-    @keyframes chipPulse {
-      0%,100% { opacity: 1; transform: scaleY(1); }
-      50%      { opacity: 0.5; transform: scaleY(0.6); }
-    }
+	<!-- Start Google Analytics -->
+<script type="text/javascript">
 
-    /* ── Bottom bar ── */
-    .bottombar {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 1rem;
-      flex-wrap: wrap;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 1.2s;
-    }
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-957803-2']);
+  _gaq.push(['_setDomainName', '.mikejutan.com']);
+  _gaq.push(['_trackPageview']);
 
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 99px;
-      padding: 0.45rem 1rem;
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-    }
-    .status-dot {
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: var(--c-lime);
-      box-shadow: 0 0 8px var(--c-lime);
-      animation: blink 1.4s ease-in-out infinite;
-    }
-    @keyframes blink {
-      0%,100% { opacity: 1; } 50% { opacity: 0.2; }
-    }
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
-    .copyright {
-      font-size: 0.62rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      opacity: 0.3;
-    }
-
-    /* ── Reveal animation ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(28px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Override sub double-declaration */
-    .sub { opacity: 0; animation: fadeUp 0.9s ease forwards 0.85s; }
-
-    /* ── Responsive tweak ── */
-    @media (max-width: 500px) {
-      .headline h1 { font-size: clamp(4rem, 22vw, 7rem); }
-    }
-  </style>
+</script><!-- End Google Analytics -->
 </head>
-<body>
+		<body>
+		<div id="tophead">
+			<div class="center floatclear">
+				<div id="logo"><a href="http://www.mikejutan.com/"><img src="rw_common/images/mjutanLogo3.png" width="200" height="75" alt="Site logo"/></a></div>
+				<h1><a href="http://www.mikejutan.com/"></a> <span></span></h1>
+			</div>
+		</div>
+		<hr class="hide" />
+		<div id="wrap">
+			<div id="wrap-nav">
+				<div id="navigation" class="jqueryslidemenu floatclear">
+					<ul><li><a href="./" rel="self" class="current">Home</a></li><li><a href="travel/" rel="self">Travel</a><ul><li><a href="travel/whereivebeen/" rel="self">Where I've Been</a></li><li><a href="travel/honeymoon/" rel="self">Honeymoon</a></li><li><a href="travel/maui2017/" rel="self">Maui 2017</a></li><li><a href="travel/vancouver2016/" rel="self">Vancouver 2016</a></li><li><a href="travel/portland2016/" rel="self">Portland 2016</a></li><li><a href="travel/israel2016/" rel="self">Israel 2016</a></li><li><a href="travel/bermuda2016/" rel="self">Bermuda 2016</a></li><li><a href="travel/london2016/" rel="self">London 2016</a></li><li><a href="travel/qm2015/" rel="self">NYC/Queen Mary 2/Oxford/Paris 2015</a></li><li><a href="travel/london2015/" rel="self">Scotland/London/Israel 2015</a></li><li><a href="travel/israel2014/" rel="self">Israel 2014</a></li><li><a href="travel/scotland2014/" rel="self">Scotland 2014</a></li><li><a href="travel/china2014/" rel="self">China 2014</a></li><li><a href="travel/texas2013/" rel="self">Texas 2013</a></li><li><a href="travel/seattle2013/" rel="self">Seattle 2013</a></li><li><a href="travel/peru2012/" rel="self">Peru/Brazil/Argentina 2012</a></li><li><a href="travel/iceland2011/" rel="self">Iceland/Europe 2011</a></li><li><a href="travel/singapore2010/" rel="self">Singapore/Malaysia 2010</a></li><li><a href="travel/japan2010/" rel="self">Japan/South Korea 2009</a></li><li><a href="travel/southafrica2008/" rel="self">South Africa 2008</a></li><li><a href="travel/europe2007/" rel="self">Europe 2007</a></li></ul></li><li><a href="work/" rel="self">Work</a><ul><li><a href="work/ilm/" rel="self">Industrial Light & Magic</a></li><li><a href="work/resume/" rel="self">Resume (CV)</a></li><li><a href="work/publications/" rel="self">Publications</a></li><li><a href="work/patents/" rel="self">Patents</a></li></ul></li><li><a href="sideprojects/" rel="self">Side Projects</a><ul><li><a href="sideprojects/makeawishbatkid/" rel="self">Batkid Begins & Make-A-Wish</a></li><li><a href="sideprojects/olpc/" rel="self">One Laptop Per Child</a></li><li><a href="sideprojects/imenurkey/" rel="self">iMenurkey</a></li><li><a href="sideprojects/gymninja/" rel="self">Gym Ninja</a></li><li><a href="sideprojects/imenorah/" rel="self">iMenorah</a></li><li><a href="sideprojects/826valencia/" rel="self">826 Valencia & inspirations</a></li></ul></li><li><a href="play/" rel="self">Play</a><ul><li><a href="play/music/" rel="self">Music</a></li><li><a href="play/raytracer/" rel="self">Raytracer & 3D</a></li></ul></li><li><a href="about/" rel="self">About Mike</a><ul><li><a href="about/bio/" rel="self">Biography</a></li><li><a href="about/media/" rel="self">Media Exposure</a></li></ul></li><li><a href="photos/" rel="self">Photography</a></li><li><a href="http://jutanclan.blogspot.com" rel="external">Blog</a></li></ul>
+				</div><!-- navigation -->
+			</div>
+			<hr class="hide" />
+			<div id="main">
+				<div id="header">
+					<div id="banner">
+						<div id="extraContainer1"><!--extra user content renders here--></div>
+					</div>
+				</div><!-- header -->
+				<hr class="hide" />
+				<div id="content" class="floatclear">
+					<div id="primary-content">
+						<h2>Welcome to mikejutan.com.</h2><span style="font-size:11px; font-weight:bold; ">"Enthusiasm is one of the most powerful engines of success. When you do a thing, do it with all your might. Put your whole soul into it. Stamp it with your own personality. Be active, be energetic, be enthusiastic and faithful, and you will accomplish your object. Nothing great was ever achieved without enthusiasm."</span><span style="font-size:11px; "><em><br />- Ralph Waldo Emerson</em></span><br /><br />Life is meant to be lived with passion, and I&rsquo;m a big fan of celebrating the small things.<br /><br /><div class="image-right"><a href="resources/mikeIguazuLarge.jpg" rel="prettyPhoto" title="Iguazu Falls, Brazil, 2012"><img class="imageStyle" alt="Mike Jutan" src="files/mikeiguazusmall.jpg" width="296" height="212" /></a></div>On this website you&rsquo;ll find lots of details about my history, work, travel, interests and hobbies.<br /><br />To live an inspired life I think it&rsquo;s completely acceptable to be really excited about pretty much everything. Cynics be damned. The world will be what we make of it. Dare to make a difference!<br /><br />Thanks for dropping by,<br /><div class="image-left"><img class="imageStyle" alt="mikejutan_black" src="files/mikejutan_black.png" width="174" height="92" /></div>
+					</div><!-- primary-content -->
+					<hr class="hide" />
+					<div id="secondary-content">
+						<h3>Latest Blog Posts</h3><!-- sidebar-header -->
+							<script src="http://feeds.feedburner.com/MikeJutansWorld?format=sigpro" type="text/javascript" ></script>
+<a href="http://jutanclan.blogspot.com" rel="external">Read More...</a>
+<div id="myExtraContent2">
+	<h2>Connect with me via Social Networks</h2>
+		<div id="social">
+			<a href="http://www.facebook.com/jutanclan"><img src="rw_common/themes/avante/images/icons/aquaticus_social/24px/facebook.png" alt="Facebook" /></a>
+			<a href="http://www.linkedin.com/in/mikejutan"><img src="rw_common/themes/avante/images/icons/aquaticus_social/24px/linkedin.png" alt="LinkedIn" /></a>
+			<a href="http://jutanclan.blogspot.com"><img src="rw_common/themes/avante/images/icons/aquaticus_social/24px/blogger.png" alt="Blogger" /></a>
+			<a href="http://www.twitter.com/jutanclan"><img src="rw_common/themes/avante/images/icons/aquaticus_social/24px/twitter.png" alt="Twitter" /></a>
+			<a href="http://www.imdb.com/name/nm2867705/"><img src="rw_common/themes/avante/images/icons/aquaticus_social/24px/imdb.png" alt="IMDB" /></a>
+			<a href="http://www.youtube.com/user/jutanclan"><img src="rw_common/themes/avante/images/icons/aquaticus_social/24px/youtube.png" alt="YouTube" /></a>
+			<a href="https://plus.google.com/112042576256401918255/posts"><img src="rw_common/themes/avante/images/icons/aquaticus_social/24px/googleplus.png" alt="Google+" /></a>
+			<a href="http://steepster.com/mjutan"><img src="rw_common/themes/avante/images/icons/aquaticus_social/24px/steepster.png" alt="Steepster" /></a>
+			<a href="http://jutanclan.yelp.com"><img src="rw_common/themes/avante/images/icons/aquaticus_social/24px/yelp.png" alt="Yelp" /></a>
+			<a href="http://www.strava.com/athletes/mjutan"><img src="rw_common/themes/avante/images/icons/aquaticus_social/24px/strava.png" alt="Strava" /></a>
+			<a href="http://jutanclan.blogspot.com/feeds/posts/default"><img src="rw_common/themes/avante/images/icons/aquaticus_social/24px/feed.png" alt="Blog Atom (RSS) Feed" /></a>
+		</div>
+</div><!-- #myExtraContent -->
 
-  <div class="blobs">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-  </div>
+<div id="myExtraContent1">
+<div id="slides">
+	<div class="slides_container">
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_1.jpg" width="900" height="350" alt="Taking over 'Gotham' :: Batkid Day :: San Francisco, CA, USA">
+			<div class="caption" style="bottom:0">
+				<p>Taking over 'Gotham' :: Batkid Day :: San Francisco, CA, USA</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_2.jpg" width="900" height="350" alt="Ferry Building at Night :: San Francisco, CA, USA">
+			<div class="caption">
+				<p>Ferry Building at Night :: San Francisco, CA, USA</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_3.jpg" width="900" height="350" alt="'Kidnapping&rsquo; the SF Giants Mascot :: Batkid Day :: San Francisco, CA, USA">
+			<div class="caption">
+				<p>'Kidnapping&rsquo; the SF Giants Mascot :: Batkid Day :: San Francisco, CA, USA</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_4.jpg" width="900" height="350" alt="Whisky Tasting :: Bruichladdich Distillery :: Isle of Islay, Scotland, UK">
+			<div class="caption">
+				<p>Whisky Tasting :: Bruichladdich Distillery :: Isle of Islay, Scotland, UK</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_5.jpg" width="900" height="350" alt="Gaucho at San Telmo Market :: Buenos Aires, Argentina">
+			<div class="caption">
+				<p>Gaucho at San Telmo Market :: Buenos Aires, Argentina</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_6.jpg" width="900" height="350" alt="Psyche Revived by Cupid's Kiss :: Paris, France">
+			<div class="caption">
+				<p>Psyche Revived by Cupid's Kiss :: Paris, France</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_7.jpg" width="900" height="350" alt="Torii Gates in water :: Miyajima, Japan">
+			<div class="caption">
+				<p>Torii Gates in water :: Miyajima, Japan</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_8.jpg" width="900" height="350" alt="Trekking :: Isle of Skye :: Scotland, UK">
+			<div class="caption">
+				<p>Trekking :: Isle of Skye :: Scotland, UK</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_9.jpg" width="900" height="350" alt="Marina Bay Sands Hotel :: Singapore">
+			<div class="caption">
+				<p>Marina Bay Sands Hotel :: Singapore</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_10.jpg" width="900" height="350" alt="Kitchenware Chandelier :: Keflavik, Iceland">
+			<div class="caption">
+				<p>Kitchenware Chandelier :: Keflavik, Iceland</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_11.jpg" width="900" height="350" alt="In the clouds :: Cusco, Peru">
+			<div class="caption" style="bottom:0">
+				<p>In the clouds :: Cusco, Peru</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_12.jpg" width="900" height="350" alt="Hwagaesa Buddhist Temple lanterns :: Seoul, South Korea">
+			<div class="caption">
+				<p>Hwagaesa Buddhist Temple lanterns :: Seoul, South Korea</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_13.jpg" width="900" height="350" alt="Completing the Inca Trail :: Machu Picchu, Peru">
+			<div class="caption">
+				<p>Completing the Inca Trail :: Machu Picchu, Peru</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_14.jpg" width="900" height="350" alt="The Decisive Moment :: Denver, CO, USA">
+			<div class="caption">
+				<p>The Decisive Moment :: Denver, CO, USA</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_15.jpg" width="900" height="350" alt="Siphon Bottles :: Buenos Aires, Argentina">
+			<div class="caption">
+				<p>Siphon Bottles :: Buenos Aires, Argentina</p>
+			</div>
+		</div> 
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_16.jpg" width="900" height="350" alt="Public Market :: Seattle, WA, USA">
+			<div class="caption">
+				<p>Public Market :: Seattle, WA, USA</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_17.jpg" width="900" height="350" alt="Montmartre Cat :: Paris, France">			<div class="caption">
+				<p>Montmartre Cat :: Paris, France</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_18.jpg" width="900" height="350" alt="Monet's Garden :: Giverny, France">
+			<div class="caption">
+				<p>Monet's Garden :: Giverny, France</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_19.jpg" width="900" height="350" alt="Haight & Ashbury District :: San Francisco, CA, USA">
+			<div class="caption">
+				<p>Haight & Ashbury District :: San Francisco, CA, USA</p>
+			</div>
+		</div>
+		<div>
+			<img src="rw_common/themes/avante/images/editable_images/banner_20.jpg" width="900" height="350" alt="Solitary Bird :: Amazon Rainforest, Peru">
+			<div class="caption">
+				<p>Solitary Bird :: Amazon Rainforest, Peru</p>
+			</div>
+		</div>
+	</div>
+	<a href="#" class="prev"><img src="rw_common/themes/avante/images/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
+	<a href="#" class="next"><img src="rw_common/themes/avante/images/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>
+</div>
 
-  <div class="stage">
-
-    <header class="topbar">
-      <div class="domain">mikejutan.com</div>
-      <div class="tag">Redesign in progress</div>
-    </header>
-
-    <main class="hero">
-      <div class="kicker">
-        <div class="kicker-line"></div>
-        <span>Something bold is coming</span>
-      </div>
-
-      <div class="headline">
-        <h1>COMING<br /><em>SOON</em></h1>
-      </div>
-
-      <p class="sub">
-        At long last, a new website is coming<br />
-        Keep an eye out for a fancy new mikejutan.com... soon(ish)
-      </p>
-
-      <div class="chips">
-        <div class="chip"></div>
-        <div class="chip"></div>
-        <div class="chip"></div>
-        <div class="chip"></div>
-        <div class="chip"></div>
-      </div>
-    </main>
-
-    <footer class="bottombar">
-      <div class="status-pill">
-        <div class="status-dot"></div>
-        Redesign underway
-      </div>
-      <div class="copyright">&copy; 2026 Mike Jutan. All rights reserved.</div>
-    </footer>
-
-  </div>
-
-</body>
+</div><!-- #myExtraContent --><!-- sidebar content you enter in the page inspector -->
+							 <!-- sidebar content such as the blog archive links -->
+					</div><!-- secondary-content -->
+					<hr class="hide" />
+				</div><!-- content -->
+			</div>
+			<div id="bottom">
+				<div id="extraContainer2" class="floatclear"><!--extra user content renders here--></div>
+			</div>
+			<hr class="hide" />
+			<div id="footer">
+				<ul><li><a href="./">Home</a>&nbsp;&raquo;&nbsp;</li></ul>
+				&copy; 2011-2022 Mike Jutan <a href="#" id="rw_email_contact">jutanclan@gmail.com</a><script type="text/javascript">var _rwObsfuscatedHref0 = "mai";var _rwObsfuscatedHref1 = "lto";var _rwObsfuscatedHref2 = ":ju";var _rwObsfuscatedHref3 = "tan";var _rwObsfuscatedHref4 = "cla";var _rwObsfuscatedHref5 = "n@g";var _rwObsfuscatedHref6 = "mai";var _rwObsfuscatedHref7 = "l.c";var _rwObsfuscatedHref8 = "om";var _rwObsfuscatedHref = _rwObsfuscatedHref0+_rwObsfuscatedHref1+_rwObsfuscatedHref2+_rwObsfuscatedHref3+_rwObsfuscatedHref4+_rwObsfuscatedHref5+_rwObsfuscatedHref6+_rwObsfuscatedHref7+_rwObsfuscatedHref8; document.getElementById('rw_email_contact').href = _rwObsfuscatedHref;</script>
+			</div><!-- footer -->
+		</div><!-- wrap -->
+		<!--[if lt IE 7]><script type="text/javascript" src="rw_common/themes/avante/js/ie6.js"></script><![endif]-->
+	</body>
 </html>
